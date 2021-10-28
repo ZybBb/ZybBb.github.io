@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">131</span>
+            <span class="post-count">144</span>
         </span>
     </span>
 
@@ -101,21 +101,21 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>##while执行语句也是挺有趣的</p>
-<p>1、这是3秒的倒计时</p>
+  <hr>
 <span id="more"></span>
-
-<p>#include&lt;stdio.h&gt;<br>#include&lt;stdlib.h&gt;<br>#include&lt;windows.h&gt;<br>int main()<br>{<br>    int a;<br>    a=3;<br>    while(a&gt;0)<br>    {<br>        system(“cls”);<br>        printf(“%d”,a);<br>        a=a-1;<br>        Sleep(1000);<br>    }<br>    system(“pause”);<br>    return 0;<br>}</p>
-<p>cls是每个数字闪过后清楚，Sleep是控制闪过的速度，可以去试试Sleep(50)</p>
+<h1 id="while执行语句"><a href="#while执行语句" class="headerlink" title="while执行语句"></a>while执行语句</h1><p>1、这是3秒的倒计时</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a;</span><br><span class="line">	a=<span class="number">3</span>;</span><br><span class="line">	<span class="keyword">while</span>(a&gt;<span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,a);</span><br><span class="line">		a=a<span class="number">-1</span>;</span><br><span class="line">		<span class="built_in">Sleep</span>(<span class="number">1000</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>cls是每个数字闪过后清楚，Sleep是控制闪过的速度，可以去试试<strong>Sleep(50)</strong></p>
 <p>2、100以内的数之和</p>
-<p>#include&lt;stdio.h&gt;<br>#include&lt;stdlib.h&gt;<br>int main()<br>{<br>    int a,i;<br>    a=0;<br>    i=1;<br>    while(i&lt;=100)<br>    {<br>        a=a+i;<br>        i=i+1;<br>    }<br>    printf(“%d\n”,a);<br>    system(“pause”);<br>    return 0;<br> } </p>
- 
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,i;</span><br><span class="line">	a=<span class="number">0</span>;</span><br><span class="line">	i=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(i&lt;=<span class="number">100</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		a=a+i;</span><br><span class="line">		i=i+<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -618,6 +618,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

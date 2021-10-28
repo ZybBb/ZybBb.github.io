@@ -105,6 +105,8 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
@@ -112,21 +114,22 @@
     <div class="article-entry" itemprop="articleBody">
        
   <hr>
-<p>#这几天学习的是条件语句，基本语句中的一种，先分享一个有趣的代码</p>
 <span id="more"></span>
-<p><img src="/2021/10/06/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A02/1.png"><br>可以看到这个背景是白色的，而且有停不下来的“芜湖起飞”<br>代码如下<br>#include &lt;stdio.h&gt;<br>#include&lt;stdlib.h&gt;<br>int main()<br>{<br>          system(“color f4”);<br>          while(1&gt;0)<br>          {<br>                   printf(“芜湖起飞”);<br>          }<br>          system(“pause”);<br>          return 0;<br>}<br>这里的背景可以去尝试改一下<br><img src="/2021/10/06/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A02/2.jpg"><br>头函数需要添加#include&lt;stdlib.h&gt;，下面的system()才能识别</p>
-<p>##比大小的方法有很多，比较简单的是if和else</p>
-<p>1、</p>
-<p>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    float a,b;<br>    scanf(“%f,%f”,&amp;a,&amp;b);<br>    if(a&gt;b)//从大到小<br>    {<br>        printf(“%f,%f”,a,b);<br>    }<br>    else<br>    printf(“%f,%f”,b,a);<br>    return 0;</p>
-<p> } </p>
+<h1 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件<stdio></stdio></h1><p><img src="/2021/10/06/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A02/1.png"><br>可以看到这个背景是白色的，而且有停不下来的“芜湖起飞”<br>代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">          <span class="built_in">system</span>(<span class="string">&quot;color f4&quot;</span>);</span><br><span class="line">          <span class="keyword">while</span>(<span class="number">1</span>&gt;<span class="number">0</span>)</span><br><span class="line">          &#123;</span><br><span class="line">                   <span class="built_in">printf</span>(<span class="string">&quot;芜湖起飞&quot;</span>);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">          <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里的背景可以去尝试改一下<br><img src="/2021/10/06/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A02/2.jpg"><br>头函数需要添加#include&lt;stdlib.h&gt;，下面的system()才能识别</p>
+<h2 id="比大小"><a href="#比大小" class="headerlink" title="比大小"></a>比大小</h2><p>1、</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%f,%f&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="keyword">if</span>(a&gt;b)<span class="comment">//从大到小</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%f,%f&quot;</span>,a,b);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%f,%f&quot;</span>,b,a);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
+
 <p>这是第一种方法，但不是老师比较喜欢的。</p>
 <p>还有第二种方法就是使用条件语句</p>
 <p>2、</p>
-<p>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    double a,b;<br>    scanf(“%lf,%lf”,&amp;a,&amp;b);<br>    a&gt;b?printf(“%lf,%lf”,a,b):printf(“%lf,%lf”,b,a);//从大到小<br>    return 0;<br> } </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a,b;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lf,%lf&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	a&gt;b?<span class="built_in">printf</span>(<span class="string">&quot;%lf,%lf&quot;</span>,a,b):<span class="built_in">printf</span>(<span class="string">&quot;%lf,%lf&quot;</span>,b,a);<span class="comment">//从大到小 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
+
 <p>这个明显比较快。</p>
 <p>当然还有一种t变量的转换，比较巧妙，也是很方便</p>
 <p>3、</p>
-<p>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    double a,b,t;<br>    scanf(“%lf,%lf”,&amp;a,&amp;b);<br>    if(a&gt;b)   //从小到大<br>    {<br>    t=a;<br>    a=b;<br>    b=t;<br>    }<br>        printf(“%f,%f”,a,b);<br>    return 0;<br>}</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a,b,t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%lf,%lf&quot;</span>,&amp;a,&amp;b);</span><br><span class="line">	<span class="keyword">if</span>(a&gt;b)   <span class="comment">//从小到大 </span></span><br><span class="line">	&#123;</span><br><span class="line">	t=a;</span><br><span class="line">	a=b;</span><br><span class="line">	b=t;</span><br><span class="line">	&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%f,%f&quot;</span>,a,b);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通过t变量的转换无需else再次说明，当然也是老师喜欢的。</p>
 <p>这是目前我学到的关于比大小的三种方法。</p>
 <p>上帝助自助者，加油！！</p>
@@ -634,6 +637,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

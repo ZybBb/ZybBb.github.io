@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">180</span>
+            <span class="post-count">181</span>
         </span>
     </span>
 
@@ -101,26 +101,20 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>##for的嵌套结构能玩出很多花样</p>
+  <hr>
 <span id="more"></span>
-
-<p>这是时钟</p>
-<p>#include&lt;stdio.h&gt;<br>#include&lt;stdlib.h&gt;<br>#include&lt;windows.h&gt;<br>int main()<br>{<br>    for(int h=0;h&lt;=1;h++)<br>    {<br>      for(int min=0;min&lt;=60;min++)<br>      {<br>        for(int s=0;s&lt;=60;s++)<br>        {<br>        printf(“%d:%d:%d\a”,h,min,s);<br>        Sleep(1000);<br>        system(“cls”);</p>
-<pre><code>&#125;
-  &#125;
-    &#125; 
-    return 0;
-</code></pre>
-<p>} </p>
-<p>小时嵌套分钟再嵌套秒，最后加个Sleep和清除指令”cls”，需要加头函数&lt;windows.h&gt;和&lt;stdlib.h&gt;</p>
-<p>###这是九九乘法表，也是典型的嵌套语句</p>
-<p>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    int i,j;<br>    for(i=1;i&lt;=9;i++){<br>        for(j=1;j&lt;=i;j++){<br>            printf(“%d * %d = %d  “,i,j,i*j);<br>        }<br>        printf(“\n”);<br>    }<br>    return 0;<br> } </p>
+<p>for的嵌套结构</p>
+<h1 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> h=<span class="number">0</span>;h&lt;=<span class="number">1</span>;h++)</span><br><span class="line">	&#123;	</span><br><span class="line">	  <span class="keyword">for</span>(<span class="keyword">int</span> min=<span class="number">0</span>;min&lt;=<span class="number">60</span>;min++)</span><br><span class="line">	  &#123; </span><br><span class="line">	    <span class="keyword">for</span>(<span class="keyword">int</span> s=<span class="number">0</span>;s&lt;=<span class="number">60</span>;s++)</span><br><span class="line">		&#123; </span><br><span class="line">	    <span class="built_in">printf</span>(<span class="string">&quot;%d:%d:%d\a&quot;</span>,h,min,s);</span><br><span class="line">	    <span class="built_in">Sleep</span>(<span class="number">1000</span>);</span><br><span class="line">	    <span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">	    </span><br><span class="line">	&#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	    &#125; </span><br><span class="line">	    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+<p>小时嵌套分钟再嵌套秒，最后加个Sleep和清除指令”cls”，需要加头函数&lt;windows.h&gt; 和&lt;stdlib.h&gt;</p>
+<h2 id="九九乘法表"><a href="#九九乘法表" class="headerlink" title="九九乘法表"></a>九九乘法表</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">9</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d * %d = %d  &quot;</span>,i,j,i*j);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"> &#125; </span><br></pre></td></tr></table></figure>
 <p>这里在每个循环的后面添加换行更清晰</p>
 <p><img src="/2021/10/21/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A04/%E6%97%A0%E6%A0%87%E9%A2%98.png"></p>
  
@@ -626,6 +620,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

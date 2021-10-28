@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">262</span>
+            <span class="post-count">285</span>
         </span>
     </span>
 
@@ -101,30 +101,20 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>学完调用函数的基础，发现这更能快速解决重复代码快速输入。</p>
+  <hr>
 <span id="more"></span>
-
+<p>学完调用函数的基础，发现这更能快速解决重复代码快速输入。</p>
 <p>这是求某数的阶乘，定义一个函数jiecheng，后面还有一个嵌套的函数定义jieguo，定义的时候不需要分号。</p>
-<p>#include&lt;stdio.h&gt;<br>int main()<br>{<br>    int jiecheng(int n);<br>    int n;<br>    do{<br>    printf(“请输入一个数\n”);<br>    scanf(“%d”,&amp;n);<br>    printf(“%d的阶乘是%d\n”,n,jiecheng(n));<br>    }while(n!=0);//当输入n=0停止<br>    return 0;<br>}<br>int jiecheng(int n)<br>{<br>    int jieguo;<br>    if(n==0||n==1)<br>    jieguo=1;<br>    else<br>    jieguo=jiecheng(n-1)*n;<br>    return(jieguo);<br>}</p>
-<p>##这是比较数的大小</p>
-<p>#include&lt;stdio.h&gt;<br>#include&lt;math.h&gt;<br>int main()<br>{<br>    float max(float x,float y);<br>    float a[4];<br>    int i;<br>    float b,c,t;<br>    for(i=0;i&lt;=3;i++)<br>    {<br>        printf(“请输入第%d数”,i+1);<br>        scanf(“%f”,&amp;a[i]);</p>
-<pre><code>&#125;
-b=max(a[0],a[1]);
-c=max(a[2],a[3]);
-t=max(b,c);
-printf(&quot;前两个数最大的数是%f&quot;,b);
-printf(&quot;后两个数最大的数是%f&quot;,c);
-printf(&quot;最大的数是%f&quot;,t);
-return 0;
-</code></pre>
-<p>}<br>float max(float x,float y)<br>{<br>    float zuidashu;<br>    return(x&gt;y?x:y);<br>}</p>
- 
+<h1 id="阶乘"><a href="#阶乘" class="headerlink" title="阶乘"></a>阶乘</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">jiecheng</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入一个数\n&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d的阶乘是%d\n&quot;</span>,n,<span class="built_in">jiecheng</span>(n));</span><br><span class="line">	&#125;<span class="keyword">while</span>(n!=<span class="number">0</span>);<span class="comment">//当输入n=0停止 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">jiecheng</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> jieguo;</span><br><span class="line">	<span class="keyword">if</span>(n==<span class="number">0</span>||n==<span class="number">1</span>)</span><br><span class="line">	jieguo=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	jieguo=<span class="built_in">jiecheng</span>(n<span class="number">-1</span>)*n;</span><br><span class="line">	<span class="keyword">return</span>(jieguo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="比较数的大小"><a href="#比较数的大小" class="headerlink" title="比较数的大小"></a>比较数的大小</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">max</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span></span>;</span><br><span class="line">	<span class="keyword">float</span> a[<span class="number">4</span>];</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">float</span> b,c,t;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">3</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;请输入第%d数&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;a[i]);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	b=<span class="built_in">max</span>(a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">	c=<span class="built_in">max</span>(a[<span class="number">2</span>],a[<span class="number">3</span>]);</span><br><span class="line">	t=<span class="built_in">max</span>(b,c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;前两个数最大的数是%f&quot;</span>,b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;后两个数最大的数是%f&quot;</span>,c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;最大的数是%f&quot;</span>,t);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">max</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> zuidashu;</span><br><span class="line">	<span class="keyword">return</span>(x&gt;y?x:y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -627,6 +617,23 @@ return 0;
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

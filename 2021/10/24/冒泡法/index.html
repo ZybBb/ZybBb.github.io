@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">385</span>
+            <span class="post-count">409</span>
         </span>
     </span>
 
@@ -105,20 +105,20 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>1、冒泡排序是最简单的排序方法，理解起来容易。虽然它的计算步骤比较多，不是最快的，但它是最基本的，初学者一定要掌握。</p>
+  <hr>
 <span id="more"></span>
-
-<p>冒泡排序的原理是：从左到右，相邻元素进行比较。每次比较一轮，就会找到序列中最大的一个或最小的一个。这个数就会从序列的最右边冒出来。</p>
-<p>以从小到大排序为例，第一轮比较后，所有数中最大的那个数就会浮到最右边；第二轮比较后，所有数中第二大的那个数就会浮到倒数第二个位置……就这样一轮一轮地比较，最后实现从小到大排序。</p>
-<p>2、# include &lt;stdio.h&gt;<br>int main(void)<br>{<br>    int a[] = {900, 2, 3, -58, 34, 76, 32, 43, 56, -70, 35, -234, 532, 543, 2500};<br>    int n;  //存放数组a中元素的个数<br>    int i;  //比较的轮数<br>    int j;  //每轮比较的次数<br>    int temp;  //交换数据时用于存放中间数据<br>    //计算数组中元素的个数<br>    n = sizeof(a) / sizeof(a[0]);  /<em>a[0]是int型, 占4字节, 所以总的字节数除以4等于元素的个数</em>/</p>
-<p>//这个是数组元素的求法</p>
-<p>​    for (i=0; i&lt;n-1; i++){  //比较n-1轮<br>​        for (j=0; j&lt;n-1-i; j++){  //每轮比较n-1-i次,<br>​            if (a[j] &lt; a[j+1]){<br>​                temp = a[j];<br>​                a[j] = a[j+1];<br>​                a[j+1] = temp;<br>​            }<br>​        }<br>​    }<br>​    for (i=0; i&lt;n; ++i)<br>​    {<br>​        printf(“%d\x20”, a[i]);//x20是空格的意思<br>​    }<br>​    printf(“\n”);<br>​    return 0;<br>}</p>
+<h1 id="冒泡原理"><a href="#冒泡原理" class="headerlink" title="冒泡原理"></a>冒泡原理</h1><p>1、冒泡排序是最简单的排序方法，理解起来容易。虽然它的计算步骤比较多，不是最快的，但它是最基本的，初学者一定要掌握。</p>
+<p>2、冒泡排序的原理是：从左到右，相邻元素进行比较。每次比较一轮，就会找到序列中最大的一个或最小的一个。这个数就会从序列的最右边冒出来。</p>
+<p>3、以从小到大排序为例，第一轮比较后，所有数中最大的那个数就会浮到最右边；第二轮比较后，所有数中第二大的那个数就会浮到倒数第二个位置……就这样一轮一轮地比较，最后实现从小到大排序。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">900</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">-58</span>, <span class="number">34</span>, <span class="number">76</span>, <span class="number">32</span>, <span class="number">43</span>, <span class="number">56</span>, <span class="number">-70</span>, <span class="number">35</span>, <span class="number">-234</span>, <span class="number">532</span>, <span class="number">543</span>, <span class="number">2500</span>&#125;;</span><br><span class="line">    <span class="keyword">int</span> n;  <span class="comment">//存放数组a中元素的个数</span></span><br><span class="line">    <span class="keyword">int</span> i;  <span class="comment">//比较的轮数</span></span><br><span class="line">    <span class="keyword">int</span> j;  <span class="comment">//每轮比较的次数</span></span><br><span class="line">    <span class="keyword">int</span> temp;  <span class="comment">//交换数据时用于存放中间数据</span></span><br><span class="line">    <span class="comment">//计算数组中元素的个数 </span></span><br><span class="line">    n = <span class="built_in"><span class="keyword">sizeof</span></span>(a) / <span class="built_in"><span class="keyword">sizeof</span></span>(a[<span class="number">0</span>]);  <span class="comment">/*a[0]是int型, 占4字节, 所以总的字节数除以4等于元素的个数*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//这个是数组元素的求法</span></span><br><span class="line"></span><br><span class="line">​    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;n<span class="number">-1</span>; i++)&#123;  <span class="comment">//比较n-1轮</span></span><br><span class="line">​        <span class="keyword">for</span> (j=<span class="number">0</span>; j&lt;n<span class="number">-1</span>-i; j++)&#123;  <span class="comment">//每轮比较n-1-i次,</span></span><br><span class="line">​            <span class="keyword">if</span> (a[j] &lt; a[j+<span class="number">1</span>])&#123;</span><br><span class="line">​                temp = a[j];</span><br><span class="line">​                a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">​                a[j+<span class="number">1</span>] = temp;</span><br><span class="line">​            &#125;</span><br><span class="line">​        &#125;</span><br><span class="line">​    &#125;</span><br><span class="line">​    <span class="keyword">for</span> (i=<span class="number">0</span>; i&lt;n; ++i)</span><br><span class="line">​    &#123;</span><br><span class="line">​        <span class="built_in">printf</span>(<span class="string">&quot;%d\x20&quot;</span>, a[i]);<span class="comment">//x20是空格的意思 </span></span><br><span class="line">​    &#125;</span><br><span class="line">​    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">​    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Ps：<img src="/2021/10/24/%E5%86%92%E6%B3%A1%E6%B3%95/QQ%E5%9B%BE%E7%89%8720211024102557.png"></p>
  
       <!-- reward -->
@@ -623,6 +623,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 

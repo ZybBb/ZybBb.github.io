@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">205</span>
+            <span class="post-count">237</span>
         </span>
     </span>
 
@@ -105,17 +105,19 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>##常见的猜数字小游戏</p>
+  <hr>
 <span id="more"></span>
-
+<h1 id="猜数字"><a href="#猜数字" class="headerlink" title="猜数字"></a>猜数字</h1><p>  常见的猜数字小游戏</p>
 <p><img src="/2021/10/27/%E5%B0%8F%E6%B8%B8%E6%88%8F/QQ%E5%9B%BE%E7%89%8720211027195313.jpg"></p>
-<p>//猜1个一百以内的整数，共5次机会<br>#include&lt;stdio.h&gt;<br>#include&lt;time.h&gt;<br>#include&lt;stdlib.h&gt;<br>int main()<br>{<br>    srand((unsigned)time(0));<br>    int num;<br>    int guess;//用户猜数<br>    int right;//正确答案<br>    int count;//已猜次数<br>    while(1)<br>    {<br>        count = 0;<br>        right = 0;<br>        num = rand()%100;//rand()%100取得的数据范围为[0,100-1]=[0,99]的随机数<br>        printf(“请猜一个数:”);<br>        while(count++ &lt; 5){<br>        scanf(“%d”,&amp;guess);//小于5次，不断猜数<br>        if(guess == num)<br>        {<br>            right = 1;<br>            printf(“恭喜猜对！\n”);break;<br>        }<br>        else if(guess&gt;num)<br>            printf(“大.\n”);<br>        else<br>            printf(“小.\n”);<br>        }<br>    if(right == 0)<br>        printf(“尝试5次，失败\n”);<br>    printf(“是否继续？y/n:”);<br>    printf(“输入n可退出\n”);<br>    int c;<br>    fflush(stdin);//计算机专业术语，功能是清空输入缓冲区<br>    c = getchar();<br>    if(c == ‘n’ || c == ‘N’)<br>            break;<br>    }<br>    return 0;<br>}</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//猜1个一百以内的整数，共5次机会 </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">srand</span>((<span class="keyword">unsigned</span>)<span class="built_in">time</span>(<span class="number">0</span>));</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="keyword">int</span> guess;<span class="comment">//用户猜数 </span></span><br><span class="line">	<span class="keyword">int</span> right;<span class="comment">//正确答案 </span></span><br><span class="line">	<span class="keyword">int</span> count;<span class="comment">//已猜次数 </span></span><br><span class="line">	<span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		count = <span class="number">0</span>;</span><br><span class="line">		right = <span class="number">0</span>;</span><br><span class="line">		num = <span class="built_in">rand</span>()%<span class="number">100</span>;<span class="comment">//rand()%100取得的数据范围为[0,100-1]=[0,99]的随机数</span></span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;请猜一个数:&quot;</span>);</span><br><span class="line">		<span class="keyword">while</span>(count++ &lt; <span class="number">5</span>)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;guess);<span class="comment">//小于5次，不断猜数 </span></span><br><span class="line">		<span class="keyword">if</span>(guess == num)</span><br><span class="line">		&#123;</span><br><span class="line">			right = <span class="number">1</span>;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;恭喜猜对！\n&quot;</span>);<span class="keyword">break</span>;</span><br><span class="line">		&#125;			</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(guess&gt;num)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;大.\n&quot;</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;小.\n&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">if</span>(right == <span class="number">0</span>)</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;尝试5次，失败\n&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;是否继续？y/n:&quot;</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;输入n可退出\n&quot;</span>);</span><br><span class="line">	<span class="keyword">int</span> c; </span><br><span class="line">	<span class="built_in">fflush</span>(stdin);<span class="comment">//计算机专业术语，功能是清空输入缓冲区</span></span><br><span class="line">	c = <span class="built_in">getchar</span>();</span><br><span class="line">	<span class="keyword">if</span>(c == <span class="string">&#x27;n&#x27;</span> || c == <span class="string">&#x27;N&#x27;</span>)</span><br><span class="line">			<span class="keyword">break</span>; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>可以用夹逼法尝试哦！！！</p>
  
       <!-- reward -->
@@ -611,6 +613,23 @@
 </script>
 
 
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=1&height=32"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
     
     
 
