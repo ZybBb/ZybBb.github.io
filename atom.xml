@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-29T16:11:35.990Z</updated>
+  <updated>2021-10-30T10:26:23.535Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,14 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>markdown</title>
+    <title>markdown的使用方法</title>
     <link href="http://example.com/2021/10/29/markdown/"/>
     <id>http://example.com/2021/10/29/markdown/</id>
     <published>2021-10-28T16:00:18.000Z</published>
-    <updated>2021-10-29T16:11:35.990Z</updated>
+    <updated>2021-10-30T10:26:23.535Z</updated>
     
     
-    <summary type="html">&lt;hr&gt;</summary>
+    <summary type="html">&lt;p&gt; hexo&lt;br&gt;— 博客&lt;/p&gt;
+&lt;hr&gt;
+&lt;hr&gt;</summary>
     
     
     
@@ -57,7 +59,7 @@
     <link href="http://example.com/2021/10/24/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
     <id>http://example.com/2021/10/24/%E5%8D%81%E8%BF%9B%E5%88%B6%E8%BD%AC%E4%BA%8C%E8%BF%9B%E5%88%B6/</id>
     <published>2021-10-24T04:20:51.000Z</published>
-    <updated>2021-10-28T08:27:23.807Z</updated>
+    <updated>2021-10-30T10:25:25.641Z</updated>
     
     
     <summary type="html">&lt;hr&gt;</summary>
