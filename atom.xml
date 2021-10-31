@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-31T11:44:03.154Z</updated>
+  <updated>2021-10-31T11:56:21.561Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/10/31/%E6%8C%87%E9%92%881/"/>
     <id>http://example.com/2021/10/31/%E6%8C%87%E9%92%881/</id>
     <published>2021-10-31T01:25:09.000Z</published>
-    <updated>2021-10-31T11:44:03.154Z</updated>
+    <updated>2021-10-31T11:56:21.561Z</updated>
     
     
     <summary type="html">&lt;hr&gt;</summary>
@@ -42,15 +42,17 @@
     <link href="http://example.com/2021/10/29/markdown/"/>
     <id>http://example.com/2021/10/29/markdown/</id>
     <published>2021-10-28T16:00:18.000Z</published>
-    <updated>2021-10-30T10:26:23.535Z</updated>
+    <updated>2021-10-31T11:57:45.727Z</updated>
     
     
-    <summary type="html">&lt;p&gt; hexo&lt;br&gt;— 博客&lt;/p&gt;
-&lt;hr&gt;
-&lt;hr&gt;</summary>
+    <summary type="html">&lt;hr&gt;</summary>
     
     
     
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
   </entry>
   
