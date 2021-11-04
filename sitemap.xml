@@ -4,7 +4,7 @@
   <url>
     <loc>http://example.com/2021/11/01/%E6%8C%87%E9%92%88%E4%B8%8E%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84/</loc>
     
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     
   </url>
   
@@ -109,7 +109,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -117,21 +117,21 @@
   
   <url>
     <loc>http://example.com/tags/%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/hexo/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/object-Object/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -140,21 +140,21 @@
   
   <url>
     <loc>http://example.com/categories/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/next%E4%B8%BB%E9%A2%98/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/intersting/</loc>
-    <lastmod>2021-11-03</lastmod>
+    <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
