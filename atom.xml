@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-04T15:52:17.492Z</updated>
+  <updated>2021-11-07T12:35:26.233Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>结构体</title>
+    <link href="http://example.com/2021/11/07/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    <id>http://example.com/2021/11/07/%E7%BB%93%E6%9E%84%E4%BD%93/</id>
+    <published>2021-11-07T12:01:43.000Z</published>
+    <updated>2021-11-07T12:35:26.233Z</updated>
+    
+    
+    <summary type="html">&lt;hr&gt;</summary>
+    
+    
+    
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+    <category term="[object Object]" scheme="http://example.com/tags/object-Object/"/>
+    
+  </entry>
   
   <entry>
     <title>指针与二维数组</title>
@@ -246,10 +267,10 @@
     <link href="http://example.com/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
     <id>http://example.com/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</id>
     <published>2021-09-26T08:59:47.000Z</published>
-    <updated>2021-09-28T12:30:33.208Z</updated>
+    <updated>2021-11-07T12:36:33.091Z</updated>
     
     
-    <summary type="html">&lt;p&gt;#如何更改博客主题&lt;br&gt;##这是我自己总结的经验，可能也会略有不足。&lt;/p&gt;</summary>
+    <summary type="html">&lt;hr&gt;</summary>
     
     
     
