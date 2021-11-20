@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>如何更改博客主题 |  啊啊啊庄</title>
+      <title>C语言练习5 |  啊啊啊庄</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -58,7 +58,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-如何更改博客主题"
+  id="post-c/C语言练习5"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -69,7 +69,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  如何更改博客主题
+  C语言练习5
 </h1>
  
 
@@ -77,19 +77,15 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" class="article-date">
-  <time datetime="2021-09-26T08:59:47.000Z" itemprop="datePublished">2021-09-26</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/next%E4%B8%BB%E9%A2%98/">next主题</a>
-  </div>
-  
+      <a href="/2021/10/21/c/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A05/" class="article-date">
+  <time datetime="2021-10-21T06:10:29.000Z" itemprop="datePublished">2021-10-21</time>
+</a>   
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">239</span>
+            <span class="post-count">285</span>
         </span>
     </span>
 
@@ -105,6 +101,8 @@
  
     </div>
       
+    <div class="tocbot"></div>
+
 
 
 
@@ -113,13 +111,10 @@
        
   <hr>
 <span id="more"></span>
-<p>如何更改博客主题<br>这是我自己总结的经验，可能也会略有不足。</p>
-<p>1、先在Hexo网站上找一个自己喜欢的主题，我选用的是next主题，可以去hexo官网的theme里搜，下载出next的解压包zip，然后放到blog里的themes这个文件夹里，建议把文件名字改成next，避免太长<img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/1.png"><img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/2.png"><img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/3.png"><br>2、然后在自己blog文件夹中打开git输入hexo s打开网站这时还是原本的主题<img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/5.png"></p>
-<p>3、打开blog文件夹里的_config.yml，找到theme,全部改成next<img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/7.png"></p>
-<p>4、再打开刚才进的网址刷新一下就会改过来了!<img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/6.png"></p>
-<p>5、git上关闭网页继续执行命令hexo clean 后hexo g 在hexo d ，他会让你输入username，这是你的gitub仓库名字，输进去会让你输SSH密匙，这是你之前设置的，复制进去就可以。成功之后就是这个样!<img src="/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/9.png"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout]&lt;title&gt;</span><br></pre></td></tr></table></figure>
- 
+<p>学完调用函数的基础，发现这更能快速解决重复代码快速输入。</p>
+<p>这是求某数的阶乘，定义一个函数jiecheng，后面还有一个嵌套的函数定义jieguo，定义的时候不需要分号。</p>
+<h1 id="阶乘"><a href="#阶乘" class="headerlink" title="阶乘"></a>阶乘</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">jiecheng</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;请输入一个数\n&quot;</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d的阶乘是%d\n&quot;</span>,n,<span class="built_in">jiecheng</span>(n));</span><br><span class="line">	&#125;<span class="keyword">while</span>(n!=<span class="number">0</span>);<span class="comment">//当输入n=0停止 </span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">jiecheng</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> jieguo;</span><br><span class="line">	<span class="keyword">if</span>(n==<span class="number">0</span>||n==<span class="number">1</span>)</span><br><span class="line">	jieguo=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	jieguo=<span class="built_in">jiecheng</span>(n<span class="number">-1</span>)*n;</span><br><span class="line">	<span class="keyword">return</span>(jieguo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="比较数的大小"><a href="#比较数的大小" class="headerlink" title="比较数的大小"></a>比较数的大小</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">float</span> <span class="title">max</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span></span>;</span><br><span class="line">	<span class="keyword">float</span> a[<span class="number">4</span>];</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">float</span> b,c,t;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;=<span class="number">3</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;请输入第%d数&quot;</span>,i+<span class="number">1</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">&quot;%f&quot;</span>,&amp;a[i]);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	b=<span class="built_in">max</span>(a[<span class="number">0</span>],a[<span class="number">1</span>]);</span><br><span class="line">	c=<span class="built_in">max</span>(a[<span class="number">2</span>],a[<span class="number">3</span>]);</span><br><span class="line">	t=<span class="built_in">max</span>(b,c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;前两个数最大的数是%f&quot;</span>,b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;后两个数最大的数是%f&quot;</span>,c);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;最大的数是%f&quot;</span>,t);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">max</span><span class="params">(<span class="keyword">float</span> x,<span class="keyword">float</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> zuidashu;</span><br><span class="line">	<span class="keyword">return</span>(x&gt;y?x:y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure> 
       <!-- reward -->
       
       <div id="reword-out">
@@ -189,12 +184,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/09/26/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2021/10/21/c/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A05/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/" rel="tag">[object Object]</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
 
     </footer>
   </div>
@@ -202,19 +197,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2021/09/28/c/C%E8%AF%AD%E8%A8%80%E7%9A%84%E5%AD%A6%E4%B9%A01/" class="article-nav-link">
+      <a href="/2021/10/24/c/%E5%86%92%E6%B3%A1%E6%B3%95/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            C语言的学习1
+            冒泡法
           
         </div>
       </a>
     
     
-      <a href="/2021/09/21/hello-world/" class="article-nav-link">
+      <a href="/2021/10/21/c/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A04/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
+        <div class="article-nav-title">C语言练习4</div>
       </a>
     
   </nav>
