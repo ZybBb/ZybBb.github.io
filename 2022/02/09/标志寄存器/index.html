@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>gets存在的漏洞及改进 |  啊啊啊庄</title>
+      <title>标志寄存器 |  啊啊啊庄</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -58,7 +58,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-gets存在的漏洞及改进"
+  id="post-标志寄存器"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -69,7 +69,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  gets存在的漏洞及改进
+  标志寄存器
 </h1>
  
 
@@ -77,15 +77,19 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2022/01/17/gets%E5%AD%98%E5%9C%A8%E7%9A%84%E6%BC%8F%E6%B4%9E%E5%8F%8A%E6%94%B9%E8%BF%9B/" class="article-date">
-  <time datetime="2022-01-17T12:17:52.000Z" itemprop="datePublished">2022-01-17</time>
-</a>   
+      <a href="/2022/02/09/%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" class="article-date">
+  <time datetime="2022-02-09T11:50:33.000Z" itemprop="datePublished">2022-02-09</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">汇编语言</a>
+  </div>
+  
 <div class="word_count">
     <span class="post-time">
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">711</span>
+            <span class="post-count">189</span>
         </span>
     </span>
 
@@ -94,15 +98,13 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">2 分钟</span>
+            <span class="post-count">1 分钟</span>
         </span>
     </span>
 </div>
  
     </div>
       
-    <div class="tocbot"></div>
-
 
 
 
@@ -111,13 +113,7 @@
        
   <hr>
 <span id="more"></span>
-<h1 id="gets-存在的漏洞"><a href="#gets-存在的漏洞" class="headerlink" title="gets()存在的漏洞"></a>gets()存在的漏洞</h1><p>gets()函数不检查缓冲长度，可能导致漏洞。调用函数gets(buffer)，会把用户输入的内容放在buffer中，但是对这个内容没有检查长度。如果用户输入内容过长，就会覆盖在buffer之后定义的变量，也就是说用户可以随意更改一些程序中的变量。这也是我们常见的一个漏洞：“缓冲区溢出”，简单来说就是“程序向缓冲区写入了超过缓冲区最大能保存的数据”。</p>
-<h1 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h1><p>例如这个代码，我这里使用gets函数，若输入的字符在9个以内（回车也算一个字符），就不会出现溢出现象，若超过9个也不会停止，会一直识别直到出现回车。溢出是存在风险的，也就是漏洞，缓冲区溢出是一种非常危险的漏洞，在各种操作系统、应用软件中广泛存在。 利用缓冲区溢出攻击，可以导致程序运行失败、系统宕机、重新启动等后果。 更为严重的是，可以利用它执行非授权指令，甚至可以取得系统特权，进而进行各种非法操作。</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> str[<span class="number">10</span>]; </span><br><span class="line">	<span class="built_in">gets</span>(str) ;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,str);</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-<h1 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h1><p>   出现溢出现象是因为gets()函数从标准输入设备读字符串函数，可以无限读取，不会判断上限，以回车结束读取。所以如果输入的字符串超过10个，它也不会做检测，此时就会发生溢出。</p>
-<h1 id="避免或防范措施"><a href="#避免或防范措施" class="headerlink" title="避免或防范措施"></a>避免或防范措施</h1><p>解决的方法就是使用fgets()函数。<br>fgets()的原型是<br>#include &lt;stdio.h&gt;<br>char *fgets(char *s, int size, FILE *stream);<br>在使用时需要三个参数，s 代表要保存到的内存空间的首地址，可以是字符数组名，也可以是指向字符数组的字符指针变量名。size 代表的是读取字符串的长度。stream 表示从何种流中读取，可以是标准输入流 stdin，也可以是文件流，即从某个文件中读取，这个在后面讲文件的时候再详细介绍。标准输入流就是前面讲的输入缓冲区。所以如果是从键盘读取数据的话就是从输入缓冲区中读取数据，即从标准输入流 stdin 中读取数据，所以第三个参数为 stdin。<br>所以针对举例的程序，为了避免出现漏洞，采用fgets()函数，改进后代码如下：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> str[<span class="number">10</span>]; </span><br><span class="line">	<span class="built_in">fgets</span>(str, <span class="number">7</span>, stdin) ;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>需要读取n个字符，size输入n+1（回车也算字符）即可。</p>
+<p>1、  CF   进位标志<br>若CF=1，进位 ；若CF=0，未进位。<br>2、  PF   奇偶标志<br>若PF=1， 低8位中1的个数为偶数 ；若PF=0，低8位中1的个数为奇数。<br>3、  AF   辅助进位标志<br>若AF=1，进位 ；若AF=0，未进位。<br>4、  ZF   零标志<br>若ZF=1， 运算结果为0； 若ZF=0， 运算结果不为0.<br>5、  SF   符号标识<br>若SF=1， 运算结果为负数； 若SF=0，运算结果为正数。<br>6、  TF   追踪标识<br>7、  IF   中断标识<br>若IF=1， 允许中断； 若IF=0，禁止中断。<br>8、  DF   方向标识<br>若DF=1,  运算结果数值减少； 若DF=0，运算结果数值增加。<br>9、  OF  溢出标识<br>若OF=1，溢出； 若OF=0 ，未溢出。</p>
  
       <!-- reward -->
       
@@ -188,12 +184,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/01/17/gets%E5%AD%98%E5%9C%A8%E7%9A%84%E6%BC%8F%E6%B4%9E%E5%8F%8A%E6%94%B9%E8%BF%9B/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/02/09/%E6%A0%87%E5%BF%97%E5%AF%84%E5%AD%98%E5%99%A8/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/" rel="tag">[object Object]</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
 
     </footer>
   </div>
@@ -201,19 +197,10 @@
    
   <nav class="article-nav">
     
+    
       <a href="/2022/01/24/%E5%86%85%E5%AD%98/ollydbg%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            ollydbg的使用
-          
-        </div>
-      </a>
-    
-    
-      <a href="/2021/11/24/%E6%B1%87%E7%BC%96/DOSBox-masm/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">DOSBox+masm</div>
+        <div class="article-nav-title">ollydbg的使用</div>
       </a>
     
   </nav>
